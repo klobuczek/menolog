@@ -1,0 +1,16 @@
+- form_for :cycle, :url => cycle_path(@cycle), :html => {:method => :put} do |f|
+  = f.label :reading, 'Temperature reading:'
+  - reading_options.each do |o|
+    = f.radio_button :reading, o[1]
+    = o[0] 
+  %br
+  = f.label :contraception, 'Usage:'
+  = f.radio_button :contraception, true
+  Contraception
+  = f.radio_button :contraception, false
+  Conception
+  %br
+  #buttons  
+    = submit_tag 'Save'
+#buttons  
+  = button_to "Cancel", :controller => "main", :action => "welcome"

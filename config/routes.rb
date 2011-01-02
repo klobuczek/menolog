@@ -1,4 +1,11 @@
 Menolog::Application.routes.draw do
+  resources :samples
+
+  root :to => "welcome#index"
+  devise_for :users
+
+  resources :days
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

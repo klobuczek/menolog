@@ -1,0 +1,66 @@
+#form
+  - form_for :day, :url => day_path(@day), :html => {:method => :put} do |f|
+    #calendar
+      -#= calendar_date_select_tag "e_date", @day.date, :embedded => true, :onchange => "window.location='/days/'+ $F(this)+'/edit'"
+    =f.hidden_field :date
+    .group
+      = f.label :temperature, 'Temperature:'
+      = f.text_field  :temperature
+      %br
+      = f.label :time, "Time:"
+      = f.select :hour, "00".."23", :include_blank => true
+      \:
+      = f.select :min, "00".."59", :include_blank => true
+      %br
+      = f.label :first, "First Day of Cycle:"
+      = f.check_box :first, :class => :boxes
+      %br
+      = f.label :mensing, "Menses:"
+      = f.select :mensing, menses_options, :include_blank => true
+      %br
+      = f.label :intercourse, "Intercourse:"
+      = f.select :intercourse, 1..5, :include_blank => true
+    .group
+      .title
+        Cervical Fluid
+      %br
+      = f.label :cervical_fluid_feeling, "Feeling:"
+      = f.select :cervical_fluid_feeling, cf_feeling_options, :include_blank => true
+      %br
+      = f.label :cervical_fluid_feeling, "Appearance:"
+      = f.select :cervical_fluid_appearance, cf_appearance_options, :include_blank => true
+    .group
+      .title
+        Cervix
+      %br
+      = f.label :cervix_position, "Position:"
+      = f.select :cervix_position, c_position_options, :include_blank => true
+      %br
+      = f.label :cervix_opening, "Opening:"
+      = f.select :cervix_opening, c_opening_options, :include_blank => true
+      %br
+      = f.label :cervix_texture, "Texture:"
+      = f.select :cervix_texture, c_texture_options, :include_blank => true
+    .group
+      .title
+        Other
+      %b
+      = f.label :ovulation_pain, "Ovulation pain:"
+      = f.check_box  :ovulation_pain, :class => :boxes
+      %br
+      = f.label :tender_breasts, "Tender breats:"
+      = f.check_box  :tender_breasts, :class => :boxes
+      %br
+      = f.label :fever, "Fever:"
+      = f.check_box :fever, :class => :boxes
+      %br
+      = f.label :lack_of_sleep, "Lack of Sleep:"
+      = f.check_box :lack_of_sleep, :class => :boxes
+    #buttons
+      = submit_tag 'Save'
+      = submit_tag 'Save & Next'
+  #buttons
+    = button_to "Cancel", :controller => "welcome", :action => "index"
+    = button_to "Delete", { :action => "destroy", :id => @day }, :confirm => "Are you sure?",  :method => :delete, :disabled => @day.new_record?
+#chart
+  -#%img{ :src => url_for(:controller => "charts", :action => "cycle", :id => @day )}

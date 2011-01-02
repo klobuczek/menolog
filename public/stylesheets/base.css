@@ -1,0 +1,98 @@
+h1.banner {
+    background: pink;
+    font-variant: small-caps;
+    text-align: right;
+	clear: both;
+}
+
+h2.info {
+    font-family: helvetica, sans
+}
+
+div.showtable {
+    margin-left: 30%
+}
+
+body {
+    background: #eeeddd
+}
+
+body {
+    /*font-family: "Lucida Grande", Tahoma, Arial, Verdana, sans-serif;*/
+    /*font-size: 76%;*/ /* allows safe use of em unit - blog.fawny.org */
+}
+
+/*
+p, div, span, input, form, textarea, select, a {
+    font-size: 1em;
+}
+
+span, input, form, textarea, select, a {
+    font-size: 1em;
+}
+*/
+
+form legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+form dl input, form dl textarea, form dl select {
+    /*padding: 3px 3px 3px 3px;*/
+   /* margin-top: 3px;*/
+}
+
+
+form dl dt {
+    margin-top: 0.5em; /* white-space above field label */
+}
+
+
+form dl dd {
+    margin-left: 0px; /* by default dd is indented */
+}
+
+/*form dl dt label {
+    font-weight: bold;
+    margin-right: 1.5em;
+}*/
+
+form dl label {
+    font-weight: bold;
+    margin-right: 1.5em;
+}
+
+form dl dt span, .hint, a.hint, .hint a { /* style for hints */
+    vertical-align: text-top;
+    color: #A0A0A0;
+    font-size: 0.85em;
+}
+
+fieldset {
+	float: left;
+}
+
+#buttons {
+    clear: both;
+	float: left;
+}
+
+.button-to input{
+    float: left;
+}
+
+#calendar {
+    float: left;
+}
+
+
+#chart {
+    /*width: 70%;
+     float: left;*/
+    clear: left
+}
+
+#footer {
+    clear: both;
+}
+

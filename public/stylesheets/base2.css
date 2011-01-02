@@ -1,0 +1,85 @@
+h1.banner {
+    background: pink;
+    font-variant: small-caps;
+    text-align: right
+}
+
+h2.info {
+    font-family: helvetica, sans
+}
+
+div.showtable {
+    margin-left: 30%
+}
+
+body {
+    background: #eeeddd
+}
+
+label {
+    float: left;
+    text-align: right;
+    width: 120px;
+    font-weight: bold;
+}
+
+.group input, textarea{
+    width: 40px;
+    margin-bottom: 5px;
+}
+
+select {
+    margin-bottom: 5px;
+}
+
+.boxes{
+width: 1em;
+}
+
+br{
+clear: left;
+}
+
+
+#form {
+    /*width: 30%;*/
+    float: left;
+}
+
+#calendar {
+    /*width: 30%;*/
+    float: left;
+}
+
+.group {
+    /*width: 30%;*/
+    float: left;
+	border: solid;
+	border-color: pink;
+
+}
+
+.group .title {
+    text-align: center;
+	font-weight: bold
+}
+
+
+#buttons {
+    /*width: 30%;*/
+    clear: left;
+}
+
+/*#buttons input {
+    width: 90px;
+}*/
+
+#chart {
+    /*width: 70%;
+    float: left;*/
+	clear: left
+}
+
+#footer {
+    clear: both;
+}
