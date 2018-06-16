@@ -1,14 +1,14 @@
 source 'http://rubygems.org'
 
-gem 'rails'
+gem 'rails', '>= 5.0.0'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
-gem 'devise'
-gem 'haml'
-gem 'formtastic'
+gem 'mysql2', '>= 0.2.12'
+gem 'devise', '>= 3.5.4'
+gem 'haml', '>= 5.0.0'
+gem 'formtastic', '>= 1.2.2'
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -31,6 +31,6 @@ gem 'formtastic'
 # and rake tasks are available in development mode:
 group :development, :test do
 #   gem 'webrat'
-  gem "rspec-rails"
+  gem "rspec-rails", ">= 2.8.0"
 end
 
